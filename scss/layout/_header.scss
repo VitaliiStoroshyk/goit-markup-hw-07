@@ -21,12 +21,16 @@
   margin-right: 93px;
 }
 
-.menu-item:not(:last-child) {
-  margin-right: 50px;
+.menu-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.connect-item:not(:last-child) {
-  margin-right: 50px;
+.connect-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .header {
@@ -64,6 +68,11 @@
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .menu-link.current::after {
@@ -77,26 +86,6 @@
   background: var(--accent-color);
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
-}
-
-.header-mail:hover,
-.header-mail:focus {
-  color: var(--accent-color);
-}
-
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--accent-color);
-}
-
-.icon-header:hover,
-.icon-header:focus {
-  color: var(--accent-color);
-}
-
 .header-mail {
   font-weight: 500;
   line-height: 1.14;
@@ -104,12 +93,22 @@
   color: var(--primary-text-color);
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .icon-header {
   margin-right: 10px;
   fill: currentColor;
   vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-tel {
@@ -119,4 +118,9 @@
   color: var(--primary-text-color);
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

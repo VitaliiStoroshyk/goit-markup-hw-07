@@ -36,11 +36,11 @@
   cursor: pointer;
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-form-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form-message {
@@ -54,19 +54,15 @@
   cursor: pointer;
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-form-message:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 
-.modal-form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-form-input:focus + .modal-form-icon {
-  fill: var(--accent-color);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .modal-form-icon {
@@ -77,17 +73,10 @@
   transform: translateY(-50%);
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-form-checkbox-label::before {
-  display: block;
-  content: "";
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 1px solid #212121;
-  cursor: pointer;
-  border-radius: 2px;
+  .modal-form-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal-form-checkbox-label {
@@ -99,18 +88,29 @@
   margin-top: -8px;
   transition: color 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-image: url("../images/check.svg");
-  background-size: contain;
-  background-origin: border-box;
-}
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 1px solid #212121;
+    cursor: pointer;
+    border-radius: 2px;
+  }
 
-.modal-form-checkbox:focus + .modal-form-checkbox-label::before {
-  outline: 2px solid #212121;
+  .modal-form-checkbox:checked + &::before {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-origin: border-box;
+  }
+
+  .modal-form-checkbox:focus + &::before {
+    outline: 2px solid #212121;
+  }
 }
 
 .modal-form-button {

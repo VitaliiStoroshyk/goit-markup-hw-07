@@ -7,10 +7,10 @@
 .about-item {
   flex-basis: calc(100% / 3 - 30px);
   position: relative;
-}
 
-.about-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-text {
