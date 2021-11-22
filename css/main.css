@@ -251,37 +251,6 @@ img {
   cursor: pointer;
 }
 
-.header-container {
-  display: flex;
-}
-
-.menu-list {
-  display: flex;
-}
-
-.header-title {
-  display: flex;
-  align-items: center;
-}
-
-.header-connect {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
-
-.header-logo {
-  margin-right: 93px;
-}
-
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.connect-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .header {
   background-color: var(--hero-color);
   border-bottom: 1px solid #ececec;
@@ -289,7 +258,20 @@ img {
   padding-bottom: 25px;
 }
 
-.logo-web {
+.header-container {
+  display: flex;
+}
+
+.header-container__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-container__logo {
+  margin-right: 93px;
+}
+
+.header-container__logo-web {
   font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -297,7 +279,7 @@ img {
   color: var(--accent-color);
 }
 
-.logo-studio {
+.header-container__logo-studio {
   font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 26px;
@@ -305,11 +287,15 @@ img {
   color: var(--primary-title-color);
 }
 
-.menu-list .menu-link.current {
-  color: var(--accent-color);
+.site-nav {
+  display: flex;
 }
 
-.menu-link {
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -319,11 +305,15 @@ img {
   position: relative;
 }
 
-.menu-link:hover, .menu-link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.menu-link.current::after {
+.site-nav .site-nav__link.current {
+  color: var(--accent-color);
+}
+
+.site-nav__link.current::after {
   content: "";
   width: 100%;
   position: absolute;
@@ -334,7 +324,17 @@ img {
   background: var(--accent-color);
 }
 
-.header-mail {
+.header-connect {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.header-connect__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-connect__mail {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -343,21 +343,21 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-mail:hover, .header-mail:focus {
+.header-connect__mail:hover, .header-connect__mail:focus {
   color: var(--accent-color);
 }
 
-.icon-header {
+.header-connect__icon {
   margin-right: 10px;
   fill: currentColor;
   vertical-align: middle;
 }
 
-.icon-header:hover, .icon-header:focus {
+.header-connect__icon:hover, .header-connect__icon:focus {
   color: var(--accent-color);
 }
 
-.header-tel {
+.header-connect__tel {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -366,7 +366,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-tel:hover, .header-tel:focus {
+.header-connect__tel:hover, .header-connect__tel:focus {
   color: var(--accent-color);
 }
 
